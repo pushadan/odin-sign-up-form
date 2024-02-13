@@ -1,0 +1,56 @@
+:root{
+  --header-font-size: 18px;
+  --main-font-family: helvetica;
+  --default-margin: 20px 20px 20px 20px;
+  --left-card-width: 40vw;
+  --right-card-width: 60vw;
+
+  --background-color: #F1EDEE;
+  --text-color-main: #2f2f31;
+
+  /* margin-left: 2vw;
+  margin-right: 2vw; */
+}
+
+.main-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-container > * > h1,
+.main-container > * > h2,
+.main-container > * > h3{
+  margin: var(--default-margin);
+  font-size: var(--header-font-size);
+  font-family: var(--main-font-family);
+  text-align: left;
+  color: var(--text-color-main); 
+}
+
+/* h1{
+  text-align: left;
+} */
+
+
+.hero-container{
+  width: var(--left-card-width);
+  height: 100vh;
+  background-color: rgb(201, 141, 141);
+  background-image: url("./img/red-panda.jpg");
+  object-position: center;
+  background-size: cover; /* Adjust the size of the background image */
+  background-position: center; /* Set the position of the background image */
+}
+
+.form-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  width: var(--right-card-width);
+  height: 100vh;
+  background-color: var(--background-color);
+
+}
+
