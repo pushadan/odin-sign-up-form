@@ -8,24 +8,60 @@
     <title>Sign Up Form</title>
 </head>
 <body>
-    <div class="main-container">
-        <div class="hero-container">
-
-        </div>
+    <div class="main-container flex">
+        <div class="hero-container"></div>
         
-
-
-        <div class="form-container">
+        <div class="form-container flex">
             <h1 class="header">
                 This isn't a real online service. Heck this ain't even a real form!
                 This is just me practicing form creation and validation. Please give
                 my form a try and see if you can find any bugs.
-                <br>
-                <br>
-                Try it out!
             </h1>
 
-            
+            <div class="form-card">
+                <h1 class="header">
+                    Please fill out the following fields:
+                </h1>
+
+
+                <form action="/" class="form">
+                    <div class="left-fields">
+
+                        <div class="input first-name">
+                            <label for="first-name">First Name</label>
+                            <input type="text" id="first-name" placeholder="John" required>
+                        </div>
+                        <div class="input email">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="email@website.com" required>
+                        </div>
+                        <div class="input password">
+                            <label for="pw">Password</label>
+                            <input type="password" id="pw" placeholder="" required>
+                        </div>
+
+                    </div>
+
+                    <div class="right-fields">
+                        <div>
+                            <label for="last-name">Last Name</label>
+                            <input type="text" id="last-name" placeholder="Doe" required>
+                        </div>
+                        <div>
+                            <label for="phone-number">Phone Number</label>
+                            <input type="tel" id="phone-number" placeholder="(555)-555-555" required>
+                        </div>
+                        <div>
+                            <label for="confirm-pw">Confirm Password</label>
+                            <input type="password" id="confirm-pw" placeholder="" required>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <button type="submit">Create Account</button>
+
+
         </div>
     </div>
     
