@@ -5,10 +5,10 @@
   --left-card-width: 40vw;
   --right-card-width: 60vw;
 
-  --main-background-color: #e9e9e9;
-  --secondary-background-color: #c5c5c5;
+  --main-background-color: #F1EDEE;
+  --secondary-background-color: #3D5467;
   --text-color-main: #2f2f31;
-  --text-color-sec: #151516;
+  --text-color-sec: #F1EDEE;
 }
 .flex{
   display: flex;
@@ -33,15 +33,22 @@
 }
 
 .header{
-  width: 70%;
+  min-width: 200px;
+  max-width: 435px;
+  /* text-align: justify; */
 }
-h1,
+h1{
+  margin: var(--default-margin);
+  font-size: 20px;
+}
 h2,
 h3{
   margin: var(--default-margin);
-  font-size: var(--header-font-size);
+  font-size: calc(var(--header-font-size)*.8);
 }
-
+a{
+  color: var(--secondary-background-color);
+}
 
 .form-container{
   flex-direction: column;
@@ -66,6 +73,7 @@ h3{
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   gap: 30px;
   margin: var(--default-margin);
 
@@ -85,15 +93,16 @@ label{
 button{
   font-weight: bold;
   padding: 10px 40px 10px 40px;
-  background-color: rgb(37, 57, 37);
+  background-color: #3D5467;
   border: none;
   border-radius: 10px;
   margin: var(--default-margin);
   color: var(--main-background-color);
 }
 button:hover{
-  background-color: rgb(29, 41, 29);
+  background-color: #253440;
 
 }
+
 
 

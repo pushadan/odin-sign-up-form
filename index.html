@@ -13,9 +13,8 @@
         
         <div class="form-container flex">
             <h1 class="header">
-                This isn't a real online service. Heck this ain't even a real form!
-                This is just me practicing form creation and validation. Please give
-                my form a try and see if you can find any bugs.
+                This is a practice form. I created it for creation and validation
+                practice. Please give my form a try and see if you can find any bugs.
             </h1>
 
             <div class="form-card">
@@ -23,21 +22,24 @@
                     Please fill out the following fields:
                 </h1>
 
-
-                <form action="/" class="form">
+                <form action="https://httpbin.org/post" method="post" class="form">
                     <div class="left-fields">
 
                         <div class="input first-name">
                             <label for="first-name">First Name</label>
-                            <input type="text" id="first-name" placeholder="John" required>
+                            <input type="text" id="first-name" placeholder="John" name="first-name" required>
                         </div>
                         <div class="input email">
                             <label for="email">Email</label>
-                            <input type="email" id="email" placeholder="email@website.com" required>
+                            <input type="email" id="email" placeholder="email@website.com" name="email" required>
                         </div>
                         <div class="input password">
-                            <label for="pw">Password</label>
-                            <input type="password" id="pw" placeholder="" required>
+                            <label for="pw">Password (6-12 characters)</label>
+                            <input 
+                            type="password" id="pw" 
+                            placeholder="" name="password" 
+                            pattern="^.{6,12}$"
+                            required>
                         </div>
 
                     </div>
@@ -45,21 +47,35 @@
                     <div class="right-fields">
                         <div>
                             <label for="last-name">Last Name</label>
-                            <input type="text" id="last-name" placeholder="Doe" required>
+                            <input type="text" id="last-name" placeholder="Doe" name="last_name" required>
                         </div>
                         <div>
-                            <label for="phone-number">Phone Number</label>
-                            <input type="tel" id="phone-number" placeholder="(555)-555-555" required>
+                            <label for="phone-number">Phone Number (no dashes)</label>
+                            <input 
+                            type="tel" id="phone-number" 
+                            placeholder="555-555-555" 
+                            name="phone_number" pattern="^[0-9]{9}$"
+                            required>
                         </div>
                         <div>
                             <label for="confirm-pw">Confirm Password</label>
-                            <input type="password" id="confirm-pw" placeholder="" required>
+                            <input 
+                            type="password" id="confirm-pw" 
+                            placeholder="" name="confirm_pw"
+                            pattern="" 
+                            oninput="this.setCustomValidity(this.validity.patternMismatch ? 'Passwords do not match' : '');"
+                            required>
                         </div>
                     </div>
-                </form>
             </div>
 
-            <button type="submit">Create Account</button>
+                <button type="submit">Create Account</button>
+
+                </form>
+
+            <h2>
+                Already have an account? <a href="https://www.google.com/">Login here</a>
+            </h2>
 
 
         </div>
